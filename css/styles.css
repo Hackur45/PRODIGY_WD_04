@@ -6,8 +6,6 @@ body{
     --tw-bg-opacity: 1;
     /* background-color: rgb(203 213 254 / var(--tw-bg-opacity)); */
     background-color: rgb(43 41 41 / var(--tw-bg-opacity));
-    width: 670px;
-    height: 100%;
 }
 #navbar{
     padding: 30px 20px 20px 20px;
@@ -279,6 +277,10 @@ li::marker {
         display: none;
     }
 
+    body{
+        width: 670px;
+        height: 100%;
+    }
     .sidebar-btn{
         display: flex;
         padding-right: 40px;
