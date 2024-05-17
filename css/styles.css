@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +20,7 @@ body{
     position: fixed;
     width: 100%;
     background-color: rgb(43 41 41 / var(--tw-bg-opacity));
+    z-index: 1000;
 }
 
 #navbar-items a{
@@ -32,7 +36,7 @@ body{
 
 #navbar-name{
     font-family: 'Poppins',sans-serif;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bolder;
     display: flex;
     justify-content: center;
@@ -88,11 +92,13 @@ body{
 } */
 #home {
     display: flex;
-    height: 640px;
+    height: 100%;
     /* height: fit-content; */
     justify-content: space-evenly;
     width: 100%;
     padding: 84px 0 30px 0;
+    animation: main linear forwards;
+    animation-timeline: scroll();
 }
 
 #name{
@@ -188,6 +194,16 @@ body{
     font-weight: bold;
 }
 
+.achivements h1{
+    font-size: x-large;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+}
+.experience h1{
+    font-size: x-large;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+}
 
 .achivements >div{
     margin: 10px;
@@ -200,6 +216,12 @@ body{
 .skills{
     padding-top: 50px;
     padding-bottom: 30px;
+}
+
+.skills h2{
+    font-size: x-large;
+    font-family: "Poppins",sans-serif;
+    font-weight: bolder;
 }
 
 li::marker {
@@ -272,6 +294,129 @@ li::marker {
     animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite;
 }
 
+#about{
+    padding-top: 60px;
+    padding-bottom: 100px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: main linear forwards;
+    animation-timeline: scroll();
+    animation-range-start: 500px;
+}
+.about-content {
+    font-family: "Poppins",sans-serif;
+    font-size: larger;
+    font-weight: bolder;
+    color: white;
+    height: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.about-img > img{
+    height: 500px;
+    width: 500px;
+}
+
+
+.about-content  h1{
+    font-family: "Poppins",sans-serif;
+    color: rebeccapurple;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+#projects{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-transform: uppercase;
+    padding: 40px 40px 40px 80px;
+    animation-timeline: scroll();
+}
+.project-cards{
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+
+#projects h1{
+    font-size: xx-large;
+    font-family: "Poppins",sans-serif;
+    font-weight: bolder;
+    color: rebeccapurple;
+}
+
+.social-media h1{
+    font-family: "Poppins",sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rebeccapurple;
+}
+#contact{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 40px 40px 40px 80px;
+}
+
+.media-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.outer{
+    height: 100%;
+    width: 155px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 4px 3px 4px 3px rgb(204, 173, 105);
+}
+.outer a{
+    font-size: larger;
+    font-family: "Poppins",sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.outer img{
+    height: 100px;
+    width: 100px;
+}
+
+#media-1{
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+#media-3{
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
+
+#media-2{
+    border-radius: 20%;
+}
+
+
 @media only screen and (max-width:784px){
     #navbar-items{
         display: none;
@@ -302,6 +447,53 @@ li::marker {
 }
 
 
+#footer{
+    width: 100%;
+    background-color: rgb(43 41 41 / var(--tw-bg-opacity));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    border-top: 2px solid rebeccapurple;
+    height: 80px;
+}
 
+.footer-section h1{
+    font-family: "Poppins",sans-serif;
+    font-size: x-large;
+    color: white;
+}
+.icons-link{
+    height: 100%;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.icons-link img{
+    height: 50px;
+    width: 50px;
+}
 
+.load {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 10px;
+    z-index: 1111;
+    background-color: rebeccapurple;
+    scale: 0 1;
+    animation: load linear forwards;
+    animation-timeline: scroll();
+    transform-origin: left;
+    border-radius: 40%;
+}
+
+@keyframes load{
+    to {scale : 1 1;}
+}
+
+@keyframes main{
+    to{scale: 0.3; opacity: 1;}
+}

@@ -42,3 +42,5 @@ function erase() {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, delayBetweenWords);
 });
+
+
